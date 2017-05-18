@@ -16,10 +16,10 @@
                     <% } %>
                     <span class="meta">
                         <!-- Date -->
-                        <% if (item.date) { %>
-                            <%- item.date.format(config.date_format) %>
-                        <% } else if (item.updated) { %>
+                        <% if (item.updated) { %>
                             Last updated <%- item.updated.format("YYYY. MM.") %>
+                        <% } else if (item.date) { %>
+                            <%- item.date.format(config.date_format) %>
                         <% } %>
                     </span>
                 </div>
