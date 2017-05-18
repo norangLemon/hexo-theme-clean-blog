@@ -15,11 +15,12 @@
                     </h2>
                     <% } %>
                     <span class="meta">
-                        <!-- Date and Author -->
-                        <% if(item.author) { %>
-                            Posted by <%- item.author %> on
+                        <!-- Date -->
+                        <% if (item.date) { %>
+                            <%- item.date.format(config.date_format) %>
+                        <% } else if (item.updated) { %>
+                            Last updated <%- item.updated.format("YYYY. MM.") %>
                         <% } %>
-                        <%= item.date.format(config.date_format) %>
                     </span>
                 </div>
             </div>
