@@ -14,14 +14,14 @@
                         <%- item.subtitle %>
                     </h2>
                     <% } %>
-                    <span class="meta">
+                    <div class="meta">
                         <!-- Date -->
-                        <% if (item.updated) { %>
-                            Last updated <%- item.updated.format("YYYY. MM.") %>
+                        <% if (item.updated == 1) { %>
+                            Last updated <%- item.date.format("YYYY. MM.") %>
                         <% } else if (item.date) { %>
                             <%- item.date.format(config.date_format) %>
                         <% } %>
-                    </span>
+                    </div>
                 </div>
             </div>
         </div>
